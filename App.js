@@ -3,10 +3,13 @@ import {View, Text, StyleSheet, FlatList, Alert} from 'react-native';
 import Header from './components/Header';
 import LiftItem from './components/LiftItem';
 import AddItem from './components/AddItem';
+import LabelHeader from './components/LabelHeader';
 import uuid from 'uuid-random';
 
 // Space out Lift text
 // Add functionality to enter sets done
+
+// posts for friends
 
 const App = () => {
   const [theLift, setTheLift] = useState([
@@ -38,6 +41,7 @@ const App = () => {
       <Header />
       <FlatList
         data={theLift}
+        ListHeaderComponent={<LabelHeader />}
         ListFooterComponent={<AddItem style={styles.add} addLift={addLift} />}
         renderItem={({item}) => (
           <LiftItem item={item} removeLift={removeLift} />

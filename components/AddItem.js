@@ -10,7 +10,7 @@ import Icon from 'react-native-vector-icons/dist/FontAwesome';
 import uuid from 'uuid-random';
 
 const AddItem = ({addLift}) => {
-  const [lift, setLift] = useState('ssss');
+  const [lift, setLift] = useState('');
   const [sets, setSets] = useState(0);
   const [reps, setReps] = useState(0);
   const [weight, setWeight] = useState(0);

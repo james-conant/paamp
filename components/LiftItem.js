@@ -1,14 +1,6 @@
 import React, {useState} from 'react';
-import {
-  View,
-  Text,
-  Image,
-  StyleSheet,
-  TouchableOpacity,
-  TextInput,
-} from 'react-native';
+import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
-import uuid from 'uuid-random';
 
 const LiftItem = ({item, removeLift}) => {
   //   const [repInput, setRepInput] = useState([
