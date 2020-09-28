@@ -1,5 +1,15 @@
+// import 'react-native-gesture-handler';
+import {NavigationContainer} from '@react-navigation/native';
 import React, {useState} from 'react';
-import {View, Text, StyleSheet, FlatList, Alert} from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  FlatList,
+  Alert,
+  TouchableOpacity,
+} from 'react-native';
+import Dashboard from './components/Dashboard';
 import Header from './components/Header';
 import LiftItem from './components/LiftItem';
 import AddItem from './components/AddItem';
@@ -8,6 +18,10 @@ import uuid from 'uuid-random';
 
 // Space out Lift text
 // Add functionality to enter sets done
+// Feature that updates user when friend is lifting
+// Component that shows list of friends to spy on
+// broscience quote of the day
+// App allows users to find lifting buddies in area or if traveling
 
 // posts for friends
 
@@ -39,14 +53,16 @@ const App = () => {
   return (
     <View style={styles.container}>
       <Header />
-      <FlatList
-        data={theLift}
-        ListHeaderComponent={<LabelHeader />}
-        ListFooterComponent={<AddItem style={styles.add} addLift={addLift} />}
-        renderItem={({item}) => (
-          <LiftItem item={item} removeLift={removeLift} />
-        )}
-      />
+      <Dashboard />
+
+      {/* <FlatList
+          data={theLift}
+          ListHeaderComponent={<LabelHeader />}
+          ListFooterComponent={<AddItem style={styles.add} addLift={addLift} />}
+          renderItem={({item}) => (
+            <LiftItem item={item} removeLift={removeLift} />
+          )}
+        /> */}
     </View>
   );
 };
